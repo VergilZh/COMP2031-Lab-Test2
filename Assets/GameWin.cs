@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore;
 
 public class GameWin : MonoBehaviour
 {
+    public GameObject textBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class GameWin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("GameWin");
+        //SceneManager.LoadScene("GameWin");
+        textBox.SetActive(true);
     }
 }
