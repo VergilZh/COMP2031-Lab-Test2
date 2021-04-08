@@ -30,12 +30,13 @@ public class Grant_Controll : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) 
         {
             body.AddForce(Vector3.left * moveForce);
-            gameObject.transform.localScale = new Vector3(-1, scale.y, scale.z);
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) 
         {
             body.AddForce(Vector3.right * moveForce);
-            gameObject.transform.localScale = new Vector3(1, scale.y, scale.z);
+            GetComponent<SpriteRenderer>().flipX = false;
+            
         }
 
         float veloclty = body.velocity.magnitude;
